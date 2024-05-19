@@ -8,6 +8,7 @@ use App\Http\Middleware\AppMiddleware;
 use Illuminate\Support\Facades\Route;
 
 
-Route::post('/', [AppController::class, 'store'])->withoutMiddleware([AppMiddleware::class]);
-;
+Route::post('/uuid', [AppController::class, 'store'])->withoutMiddleware([AppMiddleware::class]);
+Route::post('/create-visit', [AppController::class, 'createVisit']);
+Route::post('/update-time', [AppController::class, 'updateTime']);
 

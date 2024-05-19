@@ -18,6 +18,11 @@ class PointService
         return $this->model->newQuery()->get();
     }
 
+    public function findById($id): Point
+    {
+        return $this->model->newQuery()->findOrFail($id);
+    }
+
 
 
 }
